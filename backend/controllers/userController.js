@@ -8,9 +8,9 @@ const User = require('../models/userModel')
 //@access Public
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body
-
     //validation
     if (!name || !email || !password) {
+        console.log('here')
         res.status(400)
         throw new Error('Please include all fields')
     }
