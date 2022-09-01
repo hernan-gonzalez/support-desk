@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d1e0e8e3-3f85-4056-8897-e3a9315f44d2",
+		"_postman_id": "5e1b1e6c-ab1d-4c8b-8ca6-a9750dd24da4",
 		"name": "support-desk",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "15971280"
+		"_exporter_id": "20207834"
 	},
 	"item": [
 		{
@@ -191,8 +191,31 @@
 		{
 			"name": "Get single ticket",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDBjNGU0OGEzZjM2MjEyNDVjMmNiNCIsImlhdCI6MTY2MjA0MTc1OCwiZXhwIjoxNjY0NjMzNzU4fQ.-9cCj9nio1A97EHlVdxwLVzYzvMEM_uGfyqedGFW8kc",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tickets/630d70edf7cb385fa42c3910",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tickets",
+						"630d70edf7cb385fa42c3910"
+					]
+				}
 			},
 			"response": []
 		},
@@ -263,6 +286,80 @@
 						"api",
 						"tickets",
 						"630d6c7bba618d1c2361f71a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDBjNGU0OGEzZjM2MjEyNDVjMmNiNCIsImlhdCI6MTY2MjA0MTc1OCwiZXhwIjoxNjY0NjMzNzU4fQ.-9cCj9nio1A97EHlVdxwLVzYzvMEM_uGfyqedGFW8kc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tickets/630d70edf7cb385fa42c3910/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tickets",
+						"630d70edf7cb385fa42c3910",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDBjNGU0OGEzZjM2MjEyNDVjMmNiNCIsImlhdCI6MTY2MjA0MTc1OCwiZXhwIjoxNjY0NjMzNzU4fQ.-9cCj9nio1A97EHlVdxwLVzYzvMEM_uGfyqedGFW8kc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "I need help",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tickets/630d70edf7cb385fa42c3910/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tickets",
+						"630d70edf7cb385fa42c3910",
+						"notes"
 					]
 				}
 			},
