@@ -15,10 +15,6 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to the support ticket api' })
-})
-
 //Routes
 app.use('/api/users', require('./routes/usesRoutes'))
 app.use('/api/tickets', require('./routes/ticketRoutes'))
